@@ -1,6 +1,26 @@
 #vapetemp
 
+##What it does
+
 python code for raspberian jessie to record temperatures and heater light cycles on a dry herb vaporizer
+
+See the obs directory for some typical outputs from an Arizer Solo 
+:)
+
+##Note
+
+In order NOT to have to run the code as root, there's a problem with jessie raspbian as of now
+that you need to fix. To do that you need to run something like this:
+
+```
+ #!/bin/bash
+ # ross feb 15 2016 fix so pi can access /dev/mem for gpio and /dev/spi...
+ # see  http://raspberrypi.stackexchange.com/questions/40105/access-gpio-pins-without-root-no-access-to-dev-mem-try-running-as-root
+ sudo chown `id -u`.`id -g` /dev/spidev0.*
+ sudo chown root.gpio /dev/gpiomem
+ sudo chmod g+rw /dev/gpiomem
+ sudo chown `id -u`.`id -g` /dev/spidev0.*
+```
 
 
 
@@ -18,17 +38,6 @@ assumed off when reading is > 5000 - typically 30k if off and the
 blu-tac holds. 
 Also finally got it working without the horror of being root to get
 gpio access via /dev/mem or dev/spidev..
-
-run something like this:
----------
-#!/bin/bash
-ross feb 15 2016 fix so pi can access /dev/mem for gpio and /dev/spi...
-see  http://raspberrypi.stackexchange.com/questions/40105/access-gpio-pins-without-root-no-access-to-dev-mem-try-running-as-root
-sudo chown `id -u`.`id -g` /dev/spidev0.*
-sudo chown root.gpio /dev/gpiomem
-sudo chmod g+rw /dev/gpiomem
-sudo chown `id -u`.`id -g` /dev/spidev0.*
----------
 
 jan 8 no graphics from matplotlib?
 update to jessie and beware that if you use apt-get install python-matplotlib,
