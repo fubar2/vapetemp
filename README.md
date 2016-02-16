@@ -1,14 +1,26 @@
 #vapetemp
 
 ##What it does
-
-python code for raspberian jessie to record temperatures and heater light cycles on a dry herb vaporizer
+Python code for raspberian jessie to record temperatures and heater light
+flashes on a dry herb vaporizer
 
 See the obs directory for some typical outputs from an Arizer Solo 
 :)
 
-##Note
+##Hardware
+This is for the optional photoresistor sensor
+https://www.adafruit.com/products/161 stuck using
+blu-tac to monitor the "heating" red blinking light on the device
+adjust to suit the gpio pin you've wired your
+photoresistor to. I'm using a photoresistor on gpio 4
+with a capacitor using a loop to count charge
+which is inverse to photocell illumination level.
+mine gives below 5000 when the red light blinks on
+and 20000+ when off using blu-tac. Idea and design from
+https://learn.adafruit.com/basic-resistor-sensor-reading-on-raspberry-pi/basic-photocell-reading
 
+
+##Recommended
 In order NOT to have to run the code as root, there's a problem with jessie raspbian as of now
 that you need to fix. To do that you need to run something like this:
 
@@ -23,9 +35,7 @@ that you need to fix. To do that you need to run something like this:
 ```
 
 
-
-*History*
-
+#Development History
 Started early january 2016, developing a vaporizer temperature probe system
 started out with the adafruit sample for my max31855
 added a stripchart and changed to spi
