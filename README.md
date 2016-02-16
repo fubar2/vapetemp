@@ -36,6 +36,11 @@ before it started cycling again.
 
 ##Hardware
 Uses a cheap k3 thermocouple interfaced with a MAX31855 from Adafruit.
+Code from https://learn.adafruit.com/max31855-thermocouple-python-library
+Setup from https://learn.adafruit.com/max31855-thermocouple-python-library/hardware
+although NOTE! The images of the gpio bus are from an earlier rpi so have fewer 
+pins - it makes sense once you ignore the additional pins on your own hardware if
+you have a 2b like me.
 
 Also uses an optional photoresistor sensor
 https://www.adafruit.com/products/161 stuck using
