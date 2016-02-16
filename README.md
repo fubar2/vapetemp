@@ -7,13 +7,18 @@ flashes on a dry herb vaporizer
 See the obs directory for some typical outputs from an Arizer Solo 
 :)
 
-Here's a typical run with two inhalations. 
+##Outputs 
 
-The temperature is recorded with a cheap thermocouple inside a packed stem (ABV
+A strip chart of temperature and heater cycling, and a tabular file of values
+
+![A typical run][example]
+
+Here's a typical run with two inhalations.
+
+The temperature is recorded with a cheap k3 thermocouple inside a packed stem (ABV
 to protect the experimenter) and mounted upside down so convection is minimised
 unless an inhalation takes place.
  
-
 Periods where the heater light blinked are identified by a photoresistor sampled to give 
 the lower blue waveform - when it's at 25, the light was on for part of the second, otherwise
 it's at 20, so it shows when the Solo heater was in play. 
@@ -26,7 +31,7 @@ After each inhalation starts, the heater kicks in - the first one is interesting
 because the Solo had just finished heating when I started inhaling so it took a while 
 before it started cycling again.
 
-![A typical run][example]
+
 
 
 ##Hardware
