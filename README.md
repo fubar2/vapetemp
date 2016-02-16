@@ -30,7 +30,9 @@ before it started cycling again.
 
 
 ##Hardware
-This is for the optional photoresistor sensor
+Uses a cheap k3 thermocouple interfaced with a MAX31855 from Adafruit.
+
+Also uses an optional photoresistor sensor
 https://www.adafruit.com/products/161 stuck using
 blu-tac to monitor the "heating" red blinking light on the device
 adjust to suit the gpio pin you've wired your
@@ -43,6 +45,9 @@ https://learn.adafruit.com/basic-resistor-sensor-reading-on-raspberry-pi/basic-p
 
 
 ##Recommended
+Need the Adafruit_GPIO python library installed and matplotlib. Native raspbian matplotlib has
+problems with tcl/tk so use the source, Luke and compile the latest code for yourself.
+
 In order NOT to have to run the code as root, there's a problem with jessie raspbian as of now
 that you need to fix. To do that you need to run something like this:
 
