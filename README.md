@@ -7,6 +7,9 @@ flashes on a dry herb vaporizer
 See the obs directory for some typical outputs from an Arizer Solo 
 :)
 
+![A typical run][example]
+
+
 ##Hardware
 This is for the optional photoresistor sensor
 https://www.adafruit.com/products/161 stuck using
@@ -63,3 +66,5 @@ MUST start with
 sudo pigpiod
 
 
+
+[example]: https://github.com/fubar2/vapetemp/blob/master/obs/stem_deep_720_secs_2_inhalations_140.png "Example run"
