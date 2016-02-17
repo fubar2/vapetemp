@@ -1,8 +1,9 @@
 #!/usr/bin/python
-# feb 15 2016 Bondi,
-# added a blinken light line - just faked as 20 or 25c
-# assumed off when reading is > 5000 - typically 30k if off and the
-# blu-tac holds. 
+# mods ross lazarus feb 15 2016 Bondi,
+# added a blinken light line - just faked as 20 or 25c level plots
+# assumed off when reading is > 2500 - typically 30k if off and the
+# blu-tac holds. No point counting beyond 2501 - saves a few cycles
+#
 # Also finally got it working without the horror of being root to get
 # gpio access via /dev/mem or dev/spidev..
 #
@@ -16,6 +17,7 @@
 #sudo chmod g+rw /dev/gpiomem
 #sudo chown `id -u`.`id -g` /dev/spidev0.*
 #---------
+#
 #
 # mods ross lazarus jan 2015
 # jan 8 no graphics from matplotlib?
